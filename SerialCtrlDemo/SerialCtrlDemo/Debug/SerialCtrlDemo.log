@@ -1,0 +1,4 @@
+﻿  SerialCtrlDemoDlg.cpp
+SerialCtrl.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  SerialCtrlDemo.vcxproj -> C:\Users\Jim\Documents\Visual Studio 2015\Projects\SerialCtrlDemo\Debug\SerialCtrlDemo.exe
+  SerialCtrlDemo.vcxproj -> C:\Users\Jim\Documents\Visual Studio 2015\Projects\SerialCtrlDemo\Debug\SerialCtrlDemo.pdb (Full PDB)
