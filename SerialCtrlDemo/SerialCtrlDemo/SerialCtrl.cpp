@@ -1,10 +1,5 @@
 #include "StdAfx.h"
 #include "SerialCtrl.h"
-/* For serial communication with HP 34401a
-*	9-13-17 JBS: Made following changes to work with multimeter serial port:
-*	$$$$ In OpenPort(): Fix baud rate at 9600, 1 stop bit, no parity, 8 data bits
-*
-*/
 
 SerialCtrl::SerialCtrl(void):m_portStatus(FALSE),m_portHandle(NULL)
 {
@@ -53,17 +48,6 @@ BOOL SerialCtrl::OpenPort(DCB dcb, const char * portName)
 			AfxMessageBox("Get configuration port has problem.");
 			return FALSE;
 		}
-
-		//m_portConfig.BaudRate = 9600;   // $$$$
-		//m_portConfig.StopBits = ONESTOPBIT; // $$$$
-		//m_portConfig.Parity = NOPARITY;
-		//m_portConfig.ByteSize = 8;
-
-		dcb.BaudRate = CBR_9600;			// $$$$ Fix baud rate at 9600, 1 stop bit, no parity, 8 data bits
-		dcb.StopBits = ONESTOPBIT;
-		dcb.Parity = NOPARITY;
-		dcb.ByteSize = DATABITS_8;
-		
 		// Assign user parameter.
 		m_portConfig.BaudRate = dcb.BaudRate;    // Specify buad rate of communicaiton.
 		m_portConfig.StopBits = dcb.StopBits;    // Specify stopbit of communication.

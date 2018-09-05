@@ -1,9 +1,6 @@
-/*	SerialCtrlDemoDlg.cpp : implementation file
-*
-*	9-13-17 JBS: $$$$ in OnBnClickedButtonWr() made two changes:
-*	1) Append carriage return & linefeed to end of command for HP 34401a
-*	2) Clear receive listbox before sending command
-*/
+// SerialCtrlDemoDlg.cpp : implementation file
+// Compiles under Visual Studio 2010 - appears to be original with no modifications by me.
+
 #include "stdafx.h"
 #include "SerialCtrlDemo.h"
 #include "SerialCtrlDemoDlg.h"
@@ -29,6 +26,8 @@ public:
 // Implementation
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedOk();
 };
 
 CAboutDlg::CAboutDlg() : CDialog(CAboutDlg::IDD)
@@ -41,6 +40,7 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
+	ON_BN_CLICKED(IDOK, &CAboutDlg::OnBnClickedOk)
 END_MESSAGE_MAP()
 
 
@@ -273,7 +273,12 @@ void CSerialCtrlDemoDlg::OnBnClickedButtonWr()
 
 	CString strW;
 	m_editWrite.GetWindowText(strW);
-	strW.Append("\r\n");			// $$$$ Append carriage return & linefeed to end of command for HP 34401a
-	m_listboxRead.ResetContent();	// Clear receive listbox before sending command
 	Write((LPTSTR)(LPCTSTR)strW,strW.GetLength());
+}
+
+
+void CAboutDlg::OnBnClickedOk()
+{
+	// TODO: Add your control notification handler code here
+	CDialog::OnOK();
 }

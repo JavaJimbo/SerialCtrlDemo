@@ -1,16 +1,5 @@
-/* SerialCtrlDemo.cpp : Defines the class behaviors for the application.
- *
- * $$$$ Modified to work with HP 34401A multimeter
- *  For commands see HP 344A Multimeter User's Guide 
- *  Part Number 34401-90004
- *
- *  Minimum command sequence to communicate with HP meter:
- *	1) Send RESET command:			"*RST\r\n"
- *  2) Enable RS232 remote control: ":SYST:REM\r\n"
- *  3) Send measurement command:	":MEAS?\r\n"
- *
- *	9-30-17 JBS: Compiled and checked 
- */
+// SerialCtrlDemo.cpp : Defines the class behaviors for the application.
+//
 
 #include "stdafx.h"
 #include "SerialCtrlDemo.h"
