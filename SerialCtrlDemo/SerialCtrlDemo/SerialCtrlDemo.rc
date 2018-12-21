@@ -64,6 +64,7 @@ END
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\SerialCtrlDemo.ico"
 
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
@@ -71,7 +72,7 @@ IDR_MAINFRAME           ICON                    "res\\SerialCtrlDemo.ico"
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Settings"
+CAPTION "About SerialCtrlDemo"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
@@ -86,18 +87,16 @@ EXSTYLE WS_EX_APPWINDOW
 CAPTION "SerialCtrlDemo"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    LTEXT           "Serial Number:",IDC_STATIC,14,10,48,8
-    COMBOBOX        IDC_COMBO_SN,66,8,48,55,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
-    LTEXT           "Baud Rate:",IDC_STATIC,135,10,37,8
-    COMBOBOX        IDC_COMBO_BR,176,8,48,55,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
     LTEXT           "Read:",IDC_STATIC,11,51,20,8
-    PUSHBUTTON      "Open",IDC_BUTTON_OPEN,242,7,50,14
-    LISTBOX         IDC_LIST_READ,11,62,288,76,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Open",IDC_BUTTON_OPEN,117,102,50,14
     EDITTEXT        IDC_EDIT_WRITE,11,34,237,14,ES_AUTOHSCROLL
     PUSHBUTTON      "Write",IDC_BUTTON_WR,252,33,46,14
-    GROUPBOX        "",IDC_STATIC,7,0,294,25
     GROUPBOX        "",IDC_STATIC,7,26,296,117
     LTEXT           "",IDC_STATIC_INFO,11,150,287,8
+    EDITTEXT        IDC_EDIT_READ,11,65,284,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_STATUS,11,123,284,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "START",IDC_BUTTON_START,11,102,46,14
+    PUSHBUTTON      "STOP",IDC_BUTTON_STOP,64,103,46,14
 END
 
 
@@ -166,12 +165,23 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SERIALCTRLDEMO_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // String Table
 //
 
 STRINGTABLE
 BEGIN
-    IDS_ABOUTBOX            "&Settings"
+    IDS_ABOUTBOX            "&About SerialCtrlDemo..."
 END
 
 #endif    // Chinese (Simplified, PRC) resources

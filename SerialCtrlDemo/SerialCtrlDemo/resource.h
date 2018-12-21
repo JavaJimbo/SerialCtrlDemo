@@ -7,13 +7,14 @@
 #define IDS_ABOUTBOX                    101
 #define IDD_SERIALCTRLDEMO_DIALOG       102
 #define IDR_MAINFRAME                   128
-#define IDC_COMBO_SN                    1000
-#define IDC_COMBO_BR                    1001
 #define IDC_BUTTON_OPEN                 1002
-#define IDC_LIST_READ                   1004
 #define IDC_EDIT_WRITE                  1005
 #define IDC_BUTTON_WR                   1006
 #define IDC_STATIC_INFO                 1007
+#define IDC_EDIT_READ                   1008
+#define IDC_EDIT_STATUS                 1009
+#define IDC_BUTTON_START                1010
+#define IDC_BUTTON_STOP                 1011
 
 // Next default values for new objects
 // 
