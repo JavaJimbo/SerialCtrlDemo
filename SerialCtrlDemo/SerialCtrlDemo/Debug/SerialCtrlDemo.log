@@ -1,42 +1,10 @@
-﻿Build started 9/5/2018 8:43:42 AM.
-     1>Project "C:\Users\JimSe\Documents\Visual Studio 2010\Projects\SerialCtrlDemo VS2010\SerialCtrlDemo\SerialCtrlDemo.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
-         Creating "Debug\SerialCtrlDemo.unsuccessfulbuild" because "AlwaysCreate" was specified.
-       ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\SerialCtrlDemo.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\SerialCtrlDemo.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt SerialCtrl.cpp SerialCtrlDemo.cpp SerialCtrlDemoDlg.cpp
-         SerialCtrlDemoDlg.cpp
-         SerialCtrlDemo.cpp
-         SerialCtrl.cpp
-         Generating Code...
-       ResourceCompile:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /D _AFXDLL /l"0x0409" /IDebug\ /nologo /fo"Debug\SerialCtrlDemo.res" SerialCtrlDemo.rc 
-       ManifestResourceCompile:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\SerialCtrlDemo.exe.embed.manifest.res" Debug\SerialCtrlDemo_manifest.rc 
-       Link:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\JimSe\Documents\Visual Studio 2010\Projects\SerialCtrlDemo VS2010\Debug\SerialCtrlDemo.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\SerialCtrlDemo.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\JimSe\Documents\Visual Studio 2010\Projects\SerialCtrlDemo VS2010\Debug\SerialCtrlDemo.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\JimSe\Documents\Visual Studio 2010\Projects\SerialCtrlDemo VS2010\Debug\SerialCtrlDemo.lib" /MACHINE:X86 Debug\SerialCtrlDemo.res
-         Debug\SerialCtrlDemo.exe.embed.manifest.res
-         Debug\SerialCtrl.obj
-         Debug\SerialCtrlDemo.obj
-         Debug\SerialCtrlDemoDlg.obj
-         Debug\stdafx.obj
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\SerialCtrlDemo.exe.embed.manifest" /manifest Debug\SerialCtrlDemo.exe.intermediate.manifest "c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\SerialCtrlDemo.exe.embed.manifest.res" Debug\SerialCtrlDemo_manifest.rc 
-       LinkEmbedManifest:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\JimSe\Documents\Visual Studio 2010\Projects\SerialCtrlDemo VS2010\Debug\SerialCtrlDemo.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\SerialCtrlDemo.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\JimSe\Documents\Visual Studio 2010\Projects\SerialCtrlDemo VS2010\Debug\SerialCtrlDemo.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\JimSe\Documents\Visual Studio 2010\Projects\SerialCtrlDemo VS2010\Debug\SerialCtrlDemo.lib" /MACHINE:X86 Debug\SerialCtrlDemo.res
-         Debug\SerialCtrlDemo.exe.embed.manifest.res
-         Debug\SerialCtrl.obj
-         Debug\SerialCtrlDemo.obj
-         Debug\SerialCtrlDemoDlg.obj
-         Debug\stdafx.obj
-         SerialCtrlDemo.vcxproj -> C:\Users\JimSe\Documents\Visual Studio 2010\Projects\SerialCtrlDemo VS2010\Debug\SerialCtrlDemo.exe
-       FinalizeBuildStatus:
-         Deleting file "Debug\SerialCtrlDemo.unsuccessfulbuild".
-         Touching "Debug\SerialCtrlDemo.lastbuildstate".
-     1>Done Building Project "C:\Users\JimSe\Documents\Visual Studio 2010\Projects\SerialCtrlDemo VS2010\SerialCtrlDemo\SerialCtrlDemo.vcxproj" (build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:05.70
+﻿  stdafx.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+  c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
+  SerialCtrlDemoDlg.cpp
+  SerialCtrlDemo.cpp
+  SerialCtrl.cpp
+  Generating Code...
+SerialCtrl.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  SerialCtrlDemo.vcxproj -> C:\Users\Jim\Documents\Visual Studio 2015\Projects\SerialCtrlDemo - Copy\Debug\SerialCtrlDemo.exe
+  SerialCtrlDemo.vcxproj -> C:\Users\Jim\Documents\Visual Studio 2015\Projects\SerialCtrlDemo - Copy\Debug\SerialCtrlDemo.pdb (Full PDB)

@@ -6,12 +6,11 @@
 #include "afxwin.h"
 
 // CSerialCtrlDemoDlg dialog
-class CSerialCtrlDemoDlg : public CDialog
+class CSerialCtrlDemoDlg : public CDialog,public CSerialIO
 {
 // Construction
 public:
 	CSerialCtrlDemoDlg(CWnd* pParent = NULL);	// standard constructor
-	~CSerialCtrlDemoDlg(); // Destructor
 
 // Dialog Data
 	enum { IDD = IDD_SERIALCTRLDEMO_DIALOG };
@@ -31,28 +30,21 @@ protected:
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
 public:
-	//virtual void OnEventOpen(BOOL bSuccess);
-	//virtual void OnEventClose(BOOL bSuccess);
-	//virtual void OnEventRead(char *inPacket,int inLength);
-	//virtual void OnEventWrite(int nWritten);
-	BOOL TestHandler();
-	bool StopTimer(UINT TimerVal);
-	UINT StartTimer(UINT TimerDuration);
-	void OnTimer(UINT_PTR TimerVal);
-	//CComboBox m_comboSN;
-	//CComboBox m_comboBR;
-	CButton m_btnOpen, m_ButtonStart, m_ButtonStop;
-	CEdit m_editWrite, m_EditRead, m_EditStatus;
-	// CListBox m_listboxRead;
-
+	virtual void OnEventOpen(BOOL bSuccess);
+	virtual void OnEventClose(BOOL bSuccess);
+	virtual void OnEventRead(char *inPacket,int inLength);
+	virtual void OnEventWrite(int nWritten);
+	CComboBox m_comboSN;
+	CComboBox m_comboBR;
+	CButton m_btnOpen;
+	CEdit m_editWrite, m_EditReceive;	
 	CStatic m_staticInfo;
-	BOOL bPortOpened;	
+	BOOL bPortOpened;
+	afx_msg void OnBnClickedButtonOpen();
 protected:
 	virtual void OnOK();
-public:	
-	afx_msg void OnBnClickedButtonStart();
-	afx_msg void OnBnClickedButtonStop();
-	afx_msg void OnBnClickedButtonOpen();
-	afx_msg void OnCbnSelchangeComboSn();
+public:
 	afx_msg void OnBnClickedButtonWr();
+	afx_msg void OnCbnSelchangeComboBr();
+	afx_msg void OnCbnSelchangeComboSn();
 };
